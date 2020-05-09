@@ -1,0 +1,25 @@
+{
+    "project": "django-demo",
+    "services": [
+        {
+            "id": "middleware",
+            "apps": [
+                {
+                    "id": "appserver",
+                    "domain": {
+                        "uri": "django-app.sloppy.zone"
+                    },
+                    "mem": 256,
+                    "image": "9633/django-app",
+                    "instances": 1,
+                    "port_mappings": [
+                        {
+                            "container_port": 8000
+                        }
+                    ]
+                    
+                }
+            ]
+        }
+    ]
+}
